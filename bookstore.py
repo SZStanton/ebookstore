@@ -66,6 +66,15 @@ while True:
 
     # Allows user to create a new book record, requires title, author, qty input
     if menu == 'new':
+        print("")
+        # Displays book table
+        cursor.execute('''
+            SELECT *
+            FROM book''')
+        rows = cursor.fetchall()
+        for row in rows:
+            print(('{0} : {1} : {2} : {3}'.format(row[0], row[1], row[2], row[3])))
+
         print("\nThese questions are pertaining to the new book.\n")
         cursor.execute("SELECT MAX(id) FROM book")
         last_id = cursor.fetchone()[0]
@@ -82,6 +91,15 @@ while True:
 
     # Allows user to update the amount of books for a record based on book 'id' input
     elif menu == 'up':
+        print("")
+        # Displays book table
+        cursor.execute('''
+            SELECT *
+            FROM book''')
+        rows = cursor.fetchall()
+        for row in rows:
+            print(('{0} : {1} : {2} : {3}'.format(row[0], row[1], row[2], row[3])))
+
         print("\nThese questions are pertaining to an existing book.\n")
         update = input("Do you want to update the Author, Title or Quantity? ").lower()
         if update == "author":
@@ -119,6 +137,15 @@ while True:
 
     # Allows user to delete a record from the database based on book 'id'
     elif menu == 'del':
+        print("")
+        # Displays book table
+        cursor.execute('''
+            SELECT *
+            FROM book''')
+        rows = cursor.fetchall()
+        for row in rows:
+            print(('{0} : {1} : {2} : {3}'.format(row[0], row[1], row[2], row[3])))
+
         print("\nThis will delete the books record.\n")
         id = valid_int_input("Please provide the ID for the book: ")
 
