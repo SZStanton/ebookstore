@@ -1,4 +1,3 @@
-
 # This one was a bit stressful, let me know if I went wrong anywhere
 # Source is my How-too guides based on Hyperion PDF's, code is my own
 # Updated for git / github tasks
