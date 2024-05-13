@@ -1,4 +1,5 @@
 # bookstore
 
 This python file allows creating, updated, deleting or searching within a created database. 
+
 It is meant as a bookstore clerk programme to search and manage their ebook catalogue.
